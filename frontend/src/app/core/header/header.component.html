@@ -1,16 +1,14 @@
 <div id="header">
   <nav id="main_navigation">
-    <a routerLink="/">Start</a>
-    <a routerLink="/does-not-exist">Does not exist</a>
-    <a routerLink="/device">Device</a>
-    <a routerLink="/home">Home</a>
-    <a routerLink="/hume">Hume</a>
-  </nav>
-
-  <app-event-overview></app-event-overview>
-
-  <div *ngIf="authenticated" (mouseover)="showAccountInfo=true" (mouseleave)="showAccountInfo=false">
+    <a class="menu-item" routerLink="/">Start</a>
+    <a class="menu-item" routerLink="/does-not-exist">Does not exist</a>
+    <a class="menu-item" routerLink="/device">Device</a>
+    <a class="menu-item" routerLink="/home">Home</a>
+    <a class="menu-item" routerLink="/hume">Hume</a>
+    <a class="menu-item account" *ngIf="authenticated" (mouseover)="showAccountInfo=true" (mouseleave)="showAccountInfo=false">
     <i class="material-icons">account_circle</i>
     <app-auth-logout *ngIf="showAccountInfo"></app-auth-logout>
-  </div>
+    </a>
+  </nav>
+
 </div>
