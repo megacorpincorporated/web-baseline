@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-
 const WS_BASE_URL = window.location.origin + "/ws/";
-
 
 @Injectable({
   providedIn: 'root'
@@ -49,5 +47,9 @@ export class WebSocketService {
 
   send(message) {
     this.ws.send(message);
+  }
+
+  sendJSON(message)  {
+    this.ws.send(JSON.stringify(message))
   }
 }

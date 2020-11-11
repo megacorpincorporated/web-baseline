@@ -18,7 +18,7 @@ NOTE! canDeactivate can be used to prevent navigation before saving changes.
  */
 
 const routes: Routes = [
-  { path: 'device', component: DeviceOverviewComponent, canActivate: [AuthGuard] }
+  { path: 'devices', component: DeviceOverviewComponent, canActivate: [AuthGuard] }
 ];
 
 @NgModule({

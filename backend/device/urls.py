@@ -1,4 +1,6 @@
 from django.urls import path
+from backend.device.views import ListDevices 
 
-
-urlpatterns = []
+urlpatterns = [
+    path("", ListDevices.as_view())
+]

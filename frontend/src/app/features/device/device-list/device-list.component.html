@@ -1,1 +1,7 @@
-<p>device-list works!</p>
+<div class="devices">
+    <div *ngFor="let device of devices" class="device">
+        <p>{{device.device.name}}</p>
+        <p>{{device.timestamp}}</p>
+    </div>
+</div>
+<button (click)="sendTestMsg()">Send Message</button>
